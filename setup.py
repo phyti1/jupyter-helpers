@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='project-helpers',
+    name='pythi',
     version='0.0.1',
     packages=find_packages(),
-    url='https://github.com/phyti1/project-helpers',
+    url='https://github.com/phyti1/pythi',
     license='MIT',
     author='Pascal Berger',
     author_email='phyti1phyti1@gmail.com',

@@ -6,7 +6,7 @@ This Python function `unify_cwd()` helps you navigate to the project's root fold
 
 ### How to Use
 
-1. Install and import the module `project-helpers` into your Python code.
+1. Install and import the module `pythi` into your Python code.
 
 2. Simply call the `unify_cwd()` function wherever you need to set your CWD to the project's root directory containing the `.git` subfolder.
 
@@ -18,7 +18,7 @@ This Python function `unify_cwd()` helps you navigate to the project's root fold
 
 ```python
 import os
-import project-helpers as pj
+import pythi as pj
 
 def main():
     print("Before unify_cwd():", os.getcwd())
@@ -38,3 +38,13 @@ In this example, calling `unify_cwd()` inside the `main()` function will change 
 - Be cautious while using this function in modules or libraries intended for distribution, as it modifies the CWD globally. It is recommended to use this function mainly in scripts used during development or personal projects.
 
 - Always remember to save your changes before executing the script using this function, as the CWD change may lead to unexpected behavior if other parts of your code rely on a specific directory structure.
+
+### Build and upload
+
+- Change version in setup.py
+- Run the following commands
+```
+python setup.py sdist bdist_wheel
+twine upload dist/*
+```
+
