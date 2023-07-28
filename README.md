@@ -1,8 +1,10 @@
-# Project Helpers
+# Pythi, Python Projects Helper
+
+This module contains basic function that help you with your python/jupyter projects.
 
 ## Project Root CWD Unifier
 
-This Python function `unify_cwd()` helps you navigate to the project's root folder that contains the `.git` subfolder. It is particularly useful when you are working in a deep directory structure and want to ensure that your current working directory (CWD) is set to the root of the project for consistent and reliable file access.
+This Python function `unify_cwd()` helps you navigate to the project's root folder that contains the `.git` subfolder. It is particularly useful when you are working in a deep directory structure and want to ensure that your current working directory (CWD) is set to the root of the project for consistent and reliable file access. It is also useful with jupyter notebooks, as their CWD is always their own folder, and this function can be used to set the CWD to the project root.
 
 ### How to Use
 
@@ -18,11 +20,13 @@ This Python function `unify_cwd()` helps you navigate to the project's root fold
 
 ```python
 import os
-import pythi as pj
+from pythi import unify_cwd
 
 def main():
+    # the place where you are in the directory hierarchy
     print("Before unify_cwd():", os.getcwd())
-    pj.unify_cwd()
+    unify_cwd()
+    # the git project root
     print("After unify_cwd():", os.getcwd())
 
 if __name__ == "__main__":
