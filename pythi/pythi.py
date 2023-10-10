@@ -12,3 +12,4 @@ def unify_cwd():
 
   # change cwd to this directory
   os.chdir(cwd)
+  
